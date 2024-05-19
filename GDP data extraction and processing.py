@@ -52,5 +52,3 @@ print(df)
 df.to_excel('Top 10 countries by GDP.xlsx',sheet_name='sheet1')
 
 
-
-
