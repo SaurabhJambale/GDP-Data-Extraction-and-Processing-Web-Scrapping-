@@ -5,7 +5,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-#Extracting data from below url
+#Extract data from below url
 url="https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
 
 # Extract gdp dataframe 
