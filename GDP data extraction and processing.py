@@ -6,13 +6,13 @@ import warnings
 warnings.filterwarnings('ignore')
 
 #Extracting data from below url
-URL="https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
+url="https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
 
+# Extract gdp dataframe 
+dfs_list= pd.read_html(url, attrs =({'class':'wikitable sortable static-row-numbers plainrowheaders srn-white-background'}))
 
-tables=pd.read_html(URL)
+df=dfs_list[0]
 
-#Extract the GDP dataframe
-df=tables[3]
 
 
 
@@ -50,5 +50,3 @@ print(df)
 
 # Save processed dataframe to excel file
 df.to_excel('Top 10 countries by GDP.xlsx',sheet_name='sheet1')
-
-
